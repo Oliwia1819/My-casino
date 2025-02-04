@@ -1,0 +1,40 @@
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #571234;
+}
+
+.wrap_menu{
+    display: flex;
+    align-items: center;
+    margin: 16px 0 16px 16px;
+}
+
+.wrap_buttons{
+    margin-right: 10px;
+}
+
+.wrap_buttons button{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 14px;
+    padding: 9px 12px;
+    margin: 16px 10px 16px 0;
+    border-radius: 6px;
+}
+
+.header h1{
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 100%;
+    margin: 0;
+    color: #ffffff;
+}
+
+.wrap_menu svg{
+    color: #A86D7A;
+    margin-right: 5px;
+}
+
