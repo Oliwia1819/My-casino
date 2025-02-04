@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  frontend:
+    image: react-app
+    volumes:
+      - .:/app
+    ports:
+      - "80:80"
