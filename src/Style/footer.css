@@ -1,0 +1,30 @@
+.footer_section button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #783346;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 10px 16px;
+    margin-top: 16px;
+    text-transform: none;
+    box-shadow: none;
+}
+
+footer{
+    padding: 0 16px 20px 16px;
+}
+
+.footer_section a{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 14px;
+    background-color: #6C2B3F;
+    padding: 8px 0 8px 16px;
+    margin-top: 1px;
+    text-decoration: none;
+}
