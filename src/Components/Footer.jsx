@@ -1,13 +1,14 @@
-import {Button, Link, List} from "@mui/material";
+import {Button, List} from "@mui/material";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import {useState} from "react";
 import '../Style/footer.css';
+import {Link} from "react-router-dom";
 
 function Footer() {
     return <footer style={{background: "#571234"}}>
         <Dropdown h4="Casino">
-            <Link to='/top'>Top</Link>
+            <Link to="/top">Top</Link>
             <Link to='/new'>New</Link>
             <Link to='/halloween'>Halloween</Link>
             <Link to='/popular'>Popular</Link>

@@ -5,5 +5,7 @@ html, body{
 
 body{
   font-family: "Roboto", sans-serif;
+  padding-top: 64px;
+  background-color: #3A0921;
 }
 

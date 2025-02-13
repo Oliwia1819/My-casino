@@ -1,0 +1,16 @@
+.not_found {
+    text-align: center;
+    height: 100vh;
+    background-color: #3A0921;
+    padding: 100px 20px;
+    color: white;
+}
+
+.not_found h1 {
+    font-size: 100px;
+    margin-bottom: 20px;
+}
+
+.not_found p {
+    font-size: 24px;
+}
