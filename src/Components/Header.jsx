@@ -1,17 +1,26 @@
 import {Button, IconButton} from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import {theme} from "./Theme";
 import "../Style/header.css";
+import {useContext} from "react";
+import {RegisterContext} from "../Providers/RegisterProvider";
 
 
-function Header({isAuthenticated, balance}){ //isAuthenticated має імнортуватись з authProvider, balance з історії поповнення
+
+
+function Header({isAuthenticated, balance, openMenu, setOpenMenu}){ //isAuthenticated має імпортуватись з authProvider, balance з історії поповнення
+    const {handleRegisterOpen} = useContext(RegisterContext);
+
     return <>
-        <header>
+        <header
+            style={{borderBottom: openMenu ? "1px solid #6C2B3F" :  "none"}}
+        >
             {isAuthenticated ?(
             <div className="header">
                 <div className='wrap_menu'>
-                    <IconButton sx={{margin: 0, padding: 0}} ><MenuIcon  /></IconButton>
+                    <ButtonsMenu openMenu={openMenu} setOpenMenu={setOpenMenu}/>
                     <h1>XCasino</h1>
                 </div>
                 <div className='wrap_buttons'>
@@ -22,12 +31,12 @@ function Header({isAuthenticated, balance}){ //isAuthenticated має імнор
                 ):(
             <div className="header">
                 <div className='wrap_menu'>
-                    <IconButton sx={{margin: 0, padding: 0}} ><MenuIcon /></IconButton>
+                    <ButtonsMenu openMenu={openMenu} setOpenMenu={setOpenMenu}/>
                     <h1>XCasino</h1>
                 </div>
                 <div className='wrap_buttons'>
                     <ButtonsAuth title="Log In" />
-                    <ButtonsAuth title="Register" />
+                    <ButtonsAuth title="Register" onclick={handleRegisterOpen} />
                 </div>
             </div>
             )}
@@ -35,10 +44,24 @@ function Header({isAuthenticated, balance}){ //isAuthenticated має імнор
     </>
 }
 
-function ButtonsAuth({title}) {
+export function ButtonsAuth({title, icon, onclick}) {
     return <>
-    <Button sx={{background: theme.palette.secondary.main, color: "#fff", textTransform: "none"}}>{title}</Button>
+        <Button sx={{background: theme.palette.secondary.main, color: "#fff", textTransform: "none", marginRight: "14px"}} onClick={onclick}>
+            {title}
+            {icon && <span>{icon}</span>}
+        </Button>
     </>
+}
+
+function ButtonsMenu({openMenu, setOpenMenu}){
+    return <div>
+
+            <IconButton sx={{margin: 0, padding: 0}} onClick={() =>setOpenMenu(!openMenu)}>
+                {openMenu ? <CloseIcon />:<MenuIcon />}
+            </IconButton>
+
+
+    </div>
 }
 
 export default Header;

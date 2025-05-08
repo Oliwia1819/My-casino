@@ -4,6 +4,7 @@ import Main from "./Screens/Main";
 import {ThemeProvider} from "@mui/material";
 import {theme} from "./Components/Theme";
 import NotFound from "./Screens/NotFound";
+import RegisterProvider from "./Providers/RegisterProvider";
 
 
 const router = createBrowserRouter([
@@ -17,12 +18,15 @@ const router = createBrowserRouter([
 ]);
 
 
-
 function App() {
   return <>
-    <ThemeProvider theme={theme}>
-      <RouterProvider router={router} />
-    </ThemeProvider>
+  <ThemeProvider theme={theme}>
+    <RegisterProvider>
+
+        <RouterProvider router={router}/>
+
+    </RegisterProvider>
+  </ThemeProvider>
   </>
 }
 

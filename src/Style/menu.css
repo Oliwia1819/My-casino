@@ -1,0 +1,38 @@
+.nav-menu button{
+    background-color: #783346;
+    margin-bottom: 4px;
+    padding: 14px 16px;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: none;
+    text-decoration: none;
+}
+
+.nav-menu a{
+    text-decoration: none;
+}
+
+.MuiDrawer-paper{
+    width: 316px;
+    padding: 84px 16px 0 16px;
+    box-sizing: border-box;
+    background-color: #571234 !important;
+
+}
+
+.auth_buttons_menu {
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+
+
