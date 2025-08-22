@@ -6,6 +6,8 @@ function Main(){
         <Screen className='main'>
             <div>bla bla</div>
         </Screen>
+
+
     </>
 }
 

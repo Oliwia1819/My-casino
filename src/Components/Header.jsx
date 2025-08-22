@@ -6,12 +6,14 @@ import {theme} from "./Theme";
 import "../Style/header.css";
 import {useContext} from "react";
 import {RegisterContext} from "../Providers/RegisterProvider";
+import {LogInContext} from "../Providers/LogInProvider";
 
 
 
 
 function Header({isAuthenticated, balance, openMenu, setOpenMenu}){ //isAuthenticated має імпортуватись з authProvider, balance з історії поповнення
     const {handleRegisterOpen} = useContext(RegisterContext);
+    const {handleLogInOpen} = useContext(LogInContext);
 
     return <>
         <header
@@ -35,7 +37,7 @@ function Header({isAuthenticated, balance, openMenu, setOpenMenu}){ //isAuthenti
                     <h1>XCasino</h1>
                 </div>
                 <div className='wrap_buttons'>
-                    <ButtonsAuth title="Log In" />
+                    <ButtonsAuth title="Log In" onclick={handleLogInOpen}/>
                     <ButtonsAuth title="Register" onclick={handleRegisterOpen} />
                 </div>
             </div>

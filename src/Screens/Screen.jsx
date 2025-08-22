@@ -4,7 +4,8 @@ import "../Style/screen.css";
 import Footer from "../Components/Footer";
 import Menu from "../Components/Menu";
 import {useState} from "react";
-import Register from "../Components/register";
+import Register from "../Components/Register";
+import LogIn from "../Components/Login";
 
 function Screen({children, className=''}){
     const [openMenu, setOpenMenu]=useState(false);  // створено тут, а не у Menu, щоб передавати пропсами одразу у два компоненти
@@ -13,6 +14,7 @@ function Screen({children, className=''}){
         <Header openMenu={openMenu} setOpenMenu={setOpenMenu}/>
         <Menu openMenu={openMenu} setOpenMenu={setOpenMenu}/>
         <Register />
+        <LogIn />
         <div className='content' style={{background: theme.palette.primary.dark}} >
             {children}
         </div>

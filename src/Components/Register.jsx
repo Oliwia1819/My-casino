@@ -26,11 +26,11 @@ function Register(){
             <DialogContentText>
                 <h2>Already have an account? Login now</h2>
                 <div>
-                    <form action={"/register.php"} method={"post"}>
+                    <form action={"/register.php"} method="POST">
                         <p>Login</p>
-                        <input type={"text"}/>
+                        <input type="text" name="login" placeholder="Username" />
                         <p>Password</p>
-                        <input type={"text"}/>
+                        <input type="password" name="password" placeholder="Password" />
                         <button>Submit</button>
                     </form>
                 </div>
